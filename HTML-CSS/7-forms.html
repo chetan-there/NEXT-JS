@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Tags</title>
+</head>
+<body>
+  <!-- FORMS collect user input -->
+  <form action="#" method="post">
+
+    <!-- <input> fields for text, email, etc. -->
+    <label>Name: <input type="text" name="name"></label><br>
+    <label>Email: <input type="email" name="email"></label><br>
+    <label>Password: <input type="password" name="pass"></label><br>
+
+    <!-- Radio buttons for one choice -->
+    Gender:
+    <input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">Female<br>
+
+    <!-- Checkboxes for multiple choice -->
+    Hobbies:
+    <input type="checkbox" name="hobby" value="read">Reading
+    <input type="checkbox" name="hobby" value="music">Music<br>
+
+    <!-- Dropdown list -->
+    <select>
+      <option>India</option>
+      <option>USA</option>
+    </select><br>
+
+    <!-- <textarea> for long text -->
+    <textarea rows="4" cols="30">Enter text here...</textarea><br>
+
+    <!-- Buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
