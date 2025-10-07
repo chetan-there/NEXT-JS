@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComicVerse | Heroes Unite!</title>
+
+  <!-- ✅ Tailwind with Dark Mode Support -->
+  <script>
+    tailwind = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ Dark mode persistence script -->
+  <script>
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+
+  <style>
+    body {
+      background-image: radial-gradient(circle at 25% 25%, #f0f8ff 3%, transparent 8%),
+        radial-gradient(circle at 75% 75%, #ffe6f0 3%, transparent 8%);
+      background-size: 80px 80px;
+    }
+
+    .dark body {
+      background-image: radial-gradient(circle at 25% 25%, #111827 3%, transparent 8%),
+        radial-gradient(circle at 75% 75%, #1f2937 3%, transparent 8%);
+    }
+
+    .comic-shadow {
+      text-shadow: 3px 3px 0 #000;
+    }
+
+    .speech-bubble {
+      position: relative;
+      background: #fff;
+      border: 3px solid #000;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .speech-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 40px;
+      border-width: 10px 10px 0;
+      border-style: solid;
+      border-color: #000 transparent;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-900 dark:text-gray-100 transition-colors duration-500 bg-white dark:bg-gray-900">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 sm:px-10 py-4 bg-purple-400 dark:bg-purple-800 border-b-4 border-black dark:border-gray-700">
+    <h1 class="text-3xl sm:text-4xl font-extrabold comic-shadow text-yellow-300 dark:text-yellow-400">ComicVerse</h1>
+    <div class="flex items-center gap-6">
+      <ul class="hidden md:flex gap-6 text-lg font-bold">
+        <li><a href="#" class="hover:text-yellow-300">Heroes</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Comics</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Shop</a></li>
+        <li><a href="#" class="hover:text-yellow-300">About</a></li>
+      </ul>
+      <button id="theme-toggle"
+        class="px-4 py-2 bg-black text-white rounded-lg border-2 border-white dark:bg-yellow-400 dark:text-black font-bold hover:scale-105 transition-transform">
+        🌙 Toggle
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section
+    class="flex flex-col-reverse md:flex-row justify-between items-center px-6 sm:px-10 py-16 sm:py-24 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 dark:from-gray-800 dark:via-purple-700 dark:to-indigo-900 border-t-4 border-black dark:border-gray-700 transition-all">
+    <div class="max-w-xl text-center md:text-left">
+      <h2 class="text-4xl sm:text-6xl font-extrabold text-white drop-shadow-lg comic-shadow">Unleash Your Inner Hero!</h2>
+      <p
+        class="mt-6 text-lg sm:text-xl text-black dark:text-gray-100 font-semibold bg-white dark:bg-gray-800 inline-block p-4 border-4 border-black dark:border-yellow-400 speech-bubble">
+        Every legend starts somewhere — join the ComicVerse and explore the stories that shaped heroes and villains!
+      </p>
+      <button
+        class="mt-8 px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-black dark:bg-yellow-500 dark:hover:bg-yellow-400 font-bold border-4 border-black dark:border-yellow-400 rounded-xl shadow-lg transition-transform hover:scale-105">
+        Start Reading
+      </button>
+    </div>
+    <div class="mt-10 md:mt-0 flex justify-center">
+      <img src="/NEXT-JS/ASSETS/images/pngwing.com (2).png" alt="Comic Hero"
+        class="w-54 sm:w-80 md:w-96 ">
+    </div>
+  </section>
+
+  <!-- Comic Panels -->
+  <section class="px-6 sm:px-10 py-16 sm:py-20 bg-white dark:bg-gray-800 transition-colors">
+    <h3 class="text-3xl sm:text-4xl font-extrabold text-center mb-10 text-purple-700 dark:text-yellow-400 comic-shadow">
+      Comic Highlights</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div
+        class="p-5 bg-yellow-300 dark:bg-yellow-600 border-4 border-black dark:border-yellow-400 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="/NEXT-JS/ASSETS/images/pngwing.com (5).png"
+          class="rounded-xl mb-4 border-2 border-black dark:border-yellow-400">
+        <h4 class="text-2xl font-bold text-red-700 dark:text-red-300">The Rise of ThunderMan</h4>
+        <p class="mt-2 font-semibold">An electrifying new chapter begins as ThunderMan faces his greatest rival!</p>
+      </div>
+
+      <div
+        class="p-5 bg-cyan-300 dark:bg-cyan-600 border-4 border-black dark:border-yellow-400 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="/NEXT-JS/ASSETS/images/pngwing.com (2).png"
+          class="rounded-xl mb-4 border-2 border-black dark:border-yellow-400">
+        <h4 class="text-2xl font-bold text-yellow-700 dark:text-yellow-200">Galaxy Defenders</h4>
+        <p class="mt-2 font-semibold">When space calls for help, the Galaxy Defenders are ready to save the stars!</p>
+      </div>
+
+      <div
+        class="p-5 bg-pink-300 dark:bg-pink-700 border-4 border-black dark:border-yellow-400 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="/NEXT-JS/ASSETS/images/pngwing.com (3).png"
+          class="rounded-xl mb-4 border-2 border-black dark:border-yellow-400">
+        <h4 class="text-2xl font-bold text-purple-700 dark:text-purple-200">Shadow City Chronicles</h4>
+        <p class="mt-2 font-semibold">In the city that never sleeps, heroes rise and villains fall!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="bg-black dark:bg-gray-950 text-yellow-300 dark:text-yellow-400 text-center py-6 text-base sm:text-lg border-t-4 border-yellow-400 dark:border-yellow-500 transition-colors">
+    © 2025 ComicVerse • All Rights Reserved
+  </footer>
+
+  <!-- ✅ Working Dark Mode Toggle -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+    });
+  </script>
+</body>
+</html>

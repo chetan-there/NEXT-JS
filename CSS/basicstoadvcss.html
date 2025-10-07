@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete CSS Guide</title>
+  <style>
+    /* =====================
+       BASIC CSS SYNTAX
+       selector { property: value; }
+    ====================== */
+
+    /* ======== SELECTORS ======== */
+    /* Universal selector */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Element selector */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    /* ID selector */
+    #main-heading {
+      color: #0077cc;
+      text-align: center;
+      text-transform: uppercase;
+      border-bottom: 3px solid #0077cc;
+      padding-bottom: 10px;
+    }
+
+    /* Class selector */
+    .highlight {
+      color: crimson;
+      background-color: #ffe5e5;
+      padding: 3px 5px;
+    }
+
+    /* Group selector */
+    h2, h3 {
+      color: #333;
+      border-left: 5px solid #0077cc;
+      padding-left: 10px;
+    }
+
+    /* Descendant selector */
+    div p {
+      color: #444;
+    }
+
+    /* Child selector */
+    div > span {
+      font-weight: bold;
+    }
+
+    /* Adjacent sibling */
+    h2 + p {
+      font-style: italic;
+    }
+
+    /* Attribute selector */
+    a[target="_blank"] {
+      color: green;
+      text-decoration: underline;
+    }
+
+    /* Pseudo-class */
+    a:hover {
+      color: orange;
+    }
+
+    /* Pseudo-element */
+    p::first-letter {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* ======== BOX MODEL ======== */
+    .box {
+      width: 200px;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid #0077cc;
+      background: white;
+      display: inline-block;
+    }
+
+    /* ======== TEXT & FONT ======== */
+    .text-demo {
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      color: #222;
+      text-shadow: 1px 1px 2px #aaa;
+      line-height: 1.5;
+    }
+
+    /* ======== COLORS ======== */
+    .color-demo {
+      background: linear-gradient(45deg, #ff6f61, #6b5b95);
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    /* ======== FLEXBOX ======== */
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #fff;
+      border: 2px solid #0077cc;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .flex-item {
+      background: #0077cc;
+      color: white;
+      padding: 20px;
+      flex: 1;
+      margin: 5px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* ======== GRID ======== */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background: #fff;
+      padding: 20px;
+      border: 2px solid #0077cc;
+    }
+
+    .grid-item {
+      background: #6b5b95;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* ======== POSITION ======== */
+    .relative-box {
+      position: relative;
+      width: 200px;
+      height: 100px;
+      background: #ccc;
+      margin: 20px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #0077cc;
+      color: white;
+      padding: 5px;
+    }
+
+    /* ======== TRANSFORM & TRANSITION ======== */
+    .transform-demo {
+      width: 100px;
+      height: 100px;
+      background: crimson;
+      transition: transform 0.5s;
+      margin: 20px;
+    }
+
+    .transform-demo:hover {
+      transform: rotate(45deg) scale(1.2);
+    }
+
+    /* ======== ANIMATION ======== */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .animate {
+      width: 100px;
+      height: 100px;
+      background: orange;
+      animation: bounce 1s infinite;
+      margin: 20px auto;
+    }
+
+    /* ======== RESPONSIVE DESIGN ======== */
+    @media (max-width: 600px) {
+      body {
+        background: #e0f7fa;
+      }
+      .flex-container {
+        flex-direction: column;
+      }
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="main-heading">Complete CSS Guide</h1>
+
+  <section>
+    <h2>1. Selectors</h2>
+    <p>This section shows different CSS selectors in action. <span class="highlight">Selectors target HTML elements</span> to apply styles.</p>
+    <div>
+      <p>Paragraph inside div (descendant)</p>
+      <span>Direct child span inside div</span>
+    </div>
+    <p>Visit <a href="https://developer.mozilla.org" target="_blank">MDN Docs</a> for more.</p>
+  </section>
+
+  <section>
+    <h2>2. Box Model</h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </section>
+
+  <section>
+    <h2>3. Text & Font</h2>
+    <p class="text-demo">This is an example of text styling with font-size, weight, and shadow.</p>
+  </section>
+
+  <section>
+    <h2>4. Colors</h2>
+    <div class="color-demo">Gradient Background Example</div>
+  </section>
+
+  <section>
+    <h2>5. Flexbox</h2>
+    <div class="flex-container">
+      <div class="flex-item">Flex 1</div>
+      <div class="flex-item">Flex 2</div>
+      <div class="flex-item">Flex 3</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Grid</h2>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>7. Position</h2>
+    <div class="relative-box">
+      Relative box
+      <div class="absolute-box">Absolute</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>8. Transform, Transition & Animation</h2>
+    <div class="transform-demo"></div>
+    <div class="animate"></div>
+  </section>
+
+  <section>
+    <h2>9. Responsive Design</h2>
+    <p>Resize the browser window to see background and layout changes for smaller screens.</p>
+  </section>
+
+</body>
+</html>

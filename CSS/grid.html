@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Complete Guide</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f0f0f0;
+  }
+
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .grid-container {
+    display: grid;
+    gap: 10px;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+
+  .grid-item {
+    background: #4CAF50;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: all 0.3s;
+  }
+
+  /* Specific items targeting */
+  .span2 {
+    grid-column: span 2;
+  }
+  .span2rows {
+    grid-row: span 2;
+  }
+  .special {
+    background: #FF5722;
+    grid-column: span 2;
+    grid-row: span 2;
+    justify-self: end;
+    align-self: end;
+  }
+
+  /* Grid shorthand */
+  .grid-shorthand {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 200px;
+    grid-auto-flow: row;
+    gap: 15px;
+  }
+
+  /* Alignments */
+  .align-demo {
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .justify-align-self-demo {
+    grid-template-columns: repeat(3, 150px);
+    grid-auto-rows: 100px;
+  }
+
+  .justify-start { justify-self: start; }
+  .justify-center { justify-self: center; }
+  .justify-end { justify-self: end; }
+
+  .align-start { align-self: start; }
+  .align-center { align-self: center; }
+  .align-end { align-self: end; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>CSS Grid Complete Guide</h1>
+
+<!-- Grid Template Columns -->
+<h2>Grid Template Columns</h2>
+<div class="grid-container">
+  <div class="grid-item">100px</div>
+  <div class="grid-item">200px</div>
+  <div class="grid-item">1fr</div>
+</div>
+
+<!-- Grid Template Rows -->
+<h2>Grid Template Rows</h2>
+<div class="grid-container">
+  <div class="grid-item">Row 1</div>
+  <div class="grid-item">Row 2</div>
+  <div class="grid-item">Row 3</div>
+  <div class="grid-item">Row 4</div>
+  <div class="grid-item">Row 5</div>
+  <div class="grid-item">Row 6</div>
+</div>
+
+<!-- Grid Column / Row Span -->
+<h2>Grid Column & Row Span</h2>
+<div class="grid-container" style="grid-template-columns: repeat(4, 1fr); grid-auto-rows: 100px;">
+  <div class="grid-item special">Span 2 Columns & 2 Rows (Special)</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+  <div class="grid-item">Item 5</div>
+</div>
+
+<!-- Grid Column / Row Start & End -->
+<h2>Grid Column & Row Start / End</h2>
+<div class="grid-container" style="grid-template-columns: repeat(4, 1fr); grid-auto-rows: 80px;">
+  <div class="grid-item" style="grid-column-start: 1; grid-column-end: 3;">Col 1 to 2</div>
+  <div class="grid-item" style="grid-row-start: 2; grid-row-end: 4;">Row 2 to 3</div>
+  <div class="grid-item" style="grid-column: 3 / 5; grid-row: 1 / 2;">Col 3-4, Row 1</div>
+</div>
+
+<!-- Grid Auto Rows & Columns -->
+<h2>Grid Auto Rows & Columns</h2>
+<div class="grid-container" style="grid-auto-rows: 100px; grid-template-columns: repeat(3, 1fr);">
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+  <div class="grid-item">Item 5</div>
+</div>
+
+<!-- Minmax & Auto-fit -->
+<h2>Minmax & Auto-fit</h2>
+<div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); grid-auto-rows: 100px;">
+  <div class="grid-item">Auto-fit 1</div>
+  <div class="grid-item">Auto-fit 2</div>
+  <div class="grid-item">Auto-fit 3</div>
+  <div class="grid-item">Auto-fit 4</div>
+  <div class="grid-item">Auto-fit 5</div>
+</div>
+
+<!-- Justify & Align Items -->
+<h2>Justify & Align Items</h2>
+<div class="grid-container align-demo">
+  <div class="grid-item">Center</div>
+  <div class="grid-item">Center</div>
+  <div class="grid-item">Center</div>
+</div>
+
+<!-- Justify-self & Align-self for Specific Item -->
+<h2>Justify-self & Align-self (Specific Item)</h2>
+<div class="grid-container justify-align-self-demo">
+  <div class="grid-item justify-start align-start">Top Left</div>
+  <div class="grid-item special">Bottom Right (Special)</div>
+  <div class="grid-item justify-center align-center">Center</div>
+</div>
+
+</body>
+</html>

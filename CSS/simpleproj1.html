@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Superman | Hero Section</title>
+  <link href="https://fonts.cdnfonts.com/css/dc-fandom" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/michroma" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Michroma', sans-serif;
+      color: wheat;
+    }
+
+    body {
+      background: #000;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 8%;
+    }
+
+    nav img {
+      width: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: wheat;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul a:hover {
+      color: #ff0000;
+    }
+
+    nav button {
+      background-color: rgb(216, 202, 3);
+      color: rgb(145, 25, 25);
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #ff0000;
+      color: #fff;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      padding: 0 8%;
+      background: radial-gradient(circle at center, #0c0c0c 0%, #000 100%);
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 280px;
+      max-width: 50%;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      color: #ff0000;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
+
+    .hero-content p {
+      margin: 20px 0 30px;
+      font-size: 1.2rem;
+      color: #ddd;
+      max-width: 450px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #ff0000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #d40000;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff0000;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 250px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 500px;
+      filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.8));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ===== RESPONSIVE BREAKPOINTS ===== */
+
+    /* Medium devices (tablets) */
+    @media (max-width: 1024px) {
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Small devices (mobile) */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        height: auto;
+        padding: 60px 5%;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-image img {
+        width: 80%;
+        margin-bottom: 30px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+
+    /* Extra small devices */
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="/NEXT-JS/ASSETS/logo's/pngwing.com.png" alt="superman logo">
+    </div>
+    <ul>
+      <a href="#">Home</a>
+      <a href="#">Heroes</a>
+      <a href="#">Skills</a>
+      <a href="#">Upgrade</a>
+    </ul>
+    <button class="btn">Login</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Superman</h1>
+      <p>The Man of Steel stands for truth, justice, and hope. Protector of Metropolis, and the hero the world looks up to.</p>
+      <a href="#learn-more" class="btn">Learn More</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="/NEXT-JS/ASSETS/hero-section images/superman_hero_section.png" alt="Superman">
+    </div>
+  </section>
+</body>
+</html>
