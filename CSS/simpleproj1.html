@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
   <link href="https://fonts.cdnfonts.com/css/dc-fandom" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/michroma" rel="stylesheet">
   <link rel="stylesheet" href="simpleproj1.css">
+
 </head>
 
 <body>
@@ -14,19 +16,28 @@
     <div class="logo">
       <img src="/NEXT-JS/ASSETS/logo's/pngwing.com.png" alt="superman logo">
     </div>
-    <ul>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul id="nav-links">
       <a href="#">Home</a>
       <a href="#">Heroes</a>
       <a href="#">Skills</a>
       <a href="#">Upgrade</a>
     </ul>
+
     <button class="btn">Login</button>
   </nav>
 
   <section class="hero">
     <div class="hero-content">
       <h1>Superman</h1>
-      <p>The Man of Steel stands for truth, justice, and hope. Protector of Metropolis, and the hero the world looks up to.</p>
+      <p>The Man of Steel stands for truth, justice, and hope. Protector of Metropolis, and the hero the world looks up
+        to.</p>
       <a href="#learn-more" class="btn">Learn More</a>
     </div>
 
@@ -34,5 +45,16 @@
       <img src="/NEXT-JS/ASSETS/hero-section images/superman_hero_section.png" alt="Superman">
     </div>
   </section>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
+
 </html>
