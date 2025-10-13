@@ -1,0 +1,8 @@
+/* Custom transition for answer buttons */
+.option-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.option-btn:hover {
+    transform: scale(1.05);
+}
