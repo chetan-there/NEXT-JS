@@ -1,0 +1,43 @@
+⚛️ React Summary
+
+React is a JavaScript library for building user interfaces, created by Facebook.
+It’s component-based, declarative, and makes building dynamic web apps efficient.
+
+🧩 Key Concepts
+Concept	Description
+Components	            Reusable building blocks of UI (functions returning JSX).
+JSX	                    JavaScript + HTML syntax combined.
+Props	                Inputs to components, passed like function arguments.
+State	                Internal data that can change over time (with useState).
+Hooks	                Functions like useState, useEffect to add React features to components.
+Virtual DOM	React’s     optimized in-memory DOM for faster UI updates.
+
+You can create a React app in two main ways:
+
+🔹 Method 1: Using Vite (Fast & Modern — Recommended)
+npm create vite@latest my-react-app
+
+🔹 Method 2: Using Create React App (CRA)
+npx create-react-app my-react-app
+cd my-react-app
+npm start
+
+react-proj-01/
+│
+├── node_modules/         # All installed dependencies (auto-created)
+├── public/               # Static assets (like icons, images)
+├── src/                  # Source code folder
+│   ├── assets/           # Custom images, logos, etc.
+│   ├── App.css           # Styles for your App component
+│   ├── App.jsx           # Main app component
+│   ├── index.css         # Global styles
+│   └── main.jsx          # Entry point (connects React to index.html)
+│
+├── .gitignore            # Files ignored by Git
+├── eslint.config.js      # Linting rules
+├── index.html            # Root HTML file (loads your React app)
+├── package-lock.json     # Dependency versions (auto-generated)
+├── package.json          # Project metadata + scripts
+├── README.md             # Project documentation
+├── vite.config.js        # Vite build configuration
+└── docs.txt              # (Your own file — optional)
