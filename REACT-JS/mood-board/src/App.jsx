@@ -76,3 +76,39 @@ function App() {
 }
 
 export default App;
+
+// function App() {
+//   const isLoggedIn = true;
+
+  // What is Conditional Rendering in React?
+
+  // Definition:
+  // Conditional rendering means showing (or hiding) parts of your UI based on a condition — just like “if-else” in JavaScript.
+
+  // React lets you use normal JS logic (if, ? :, &&) inside JSX to decide what to display.
+
+  // if (isLoggedIn) {
+  //   return <h1>Welcome Back! 👋</h1>
+  // } else {
+  //   return <h1>Please Log In 🔐</h1>;
+  // }
+
+  // return isLoggedIn ?  <h1>Welcome Back! 👋</h1> : <h1>Please Log In 🔐</h1>;
+
+  
+  // const hasNotification = true;
+
+  // return (
+  //   <div>
+  //     <h1>Dashboard</h1>
+  //     {hasNotification && <p>🔔 You have new notifications!</p>}
+  //   </div>
+  // );
+
+//   👉 && means “if left side is true, show right side.”
+// If hasNotification is false → nothing is shown.
+
+
+// }
+
+// export default App
