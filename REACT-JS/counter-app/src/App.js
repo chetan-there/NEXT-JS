@@ -35,3 +35,14 @@ const styles = {
 };
 
 export default App;
+
+
+/*
+🧠 Concept: State & Events in React
+
+State: Keeps track of data that changes over time (like a counter value or input text).
+
+useState Hook: Lets you declare and update state in functional components.
+
+Events: React’s way to handle user actions like clicks, typing, etc.
+*/
