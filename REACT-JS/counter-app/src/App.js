@@ -18,7 +18,29 @@ function App() {
       </div>
     </div>
   );
+
 }
+
+  // this is array 
+//   const [count, setCount] = useState(0);
+
+//   // this is arrow function
+//   const increament = () => setCount(count + 1)
+//   const decrement = () => setCount(count -1 )
+//   const reset = () => setCount(0)
+
+
+
+//   return (
+//   <>
+//     <h1>{count}</h1>
+
+//     <button onClick={increament}>+</button>
+//     <button onClick={decrement}>-</button>
+//     <button onClick={reset}>!</button>
+//   </>
+//   )
+// }
 
 const styles = {
   container: {
@@ -37,12 +59,12 @@ const styles = {
 export default App;
 
 
-/*
-🧠 Concept: State & Events in React
+// /*
+// 🧠 Concept: State & Events in React
 
-State: Keeps track of data that changes over time (like a counter value or input text).
+// State: Keeps track of data that changes over time (like a counter value or input text).
 
-useState Hook: Lets you declare and update state in functional components.
+// useState Hook: Lets you declare and update state in functional components.
 
-Events: React’s way to handle user actions like clicks, typing, etc.
-*/
+// Events: React’s way to handle user actions like clicks, typing, etc.
+// */

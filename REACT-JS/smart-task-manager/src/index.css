@@ -1,0 +1,29 @@
+.app {
+  text-align: center;
+  margin: 30px auto;
+  width: 350px;
+  background: #20232a;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin-right: 8px;
+}
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #61dafb;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 5px 0;
+}
